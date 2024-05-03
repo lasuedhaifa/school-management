@@ -1,0 +1,23 @@
+<div class="card">
+    <div class="text-900 text-xl font-semibold mb-3">Teachers</div>
+    <p-table responsiveLayout="scroll" [value]="tableData" #dt [rows]="8" [paginator]="true">
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="name" style="min-width:12rem" class="white-space-nowrap">Name</th>
+                <th pSortableColumn="date" style="min-width:12rem" class="white-space-nowrap">Birth-Day</th>
+                <th pSortableColumn="fileSize" style="min-width:12rem" class="white-space-nowrap">Email</th>
+                <th pSortableColumn="fileSize" style="min-width:12rem" class="white-space-nowrap">Subject</th>
+
+                <th style="width:10rem"></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-row>
+            <tr>
+                <td>{{ row.name }}</td>
+                <td>{{ row.birthday }}</td>
+                <td>{{ row.email }}</td>
+                <td>{{ row.subject }}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
