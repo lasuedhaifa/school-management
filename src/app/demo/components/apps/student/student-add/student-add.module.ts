@@ -9,6 +9,7 @@ import { InputTextareaModule } from "primeng/inputtextarea";
 import { RippleModule } from "primeng/ripple";
 import { StudentAddRoutingModule } from "./student-add-routing.module";
 import { StudentAddComponent } from "./student-add.component";
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
     imports: [
@@ -20,7 +21,9 @@ import { StudentAddComponent } from "./student-add.component";
         RippleModule,
         ChipModule,
         EditorModule,
-        StudentAddRoutingModule
+        StudentAddRoutingModule ,
+        ReactiveFormsModule 
+        
     ],
     declarations: [StudentAddComponent]
 })
