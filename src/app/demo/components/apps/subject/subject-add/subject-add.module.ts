@@ -7,8 +7,8 @@ import { FileUploadModule } from "primeng/fileupload";
 import { InputTextModule } from "primeng/inputtext";
 import { InputTextareaModule } from "primeng/inputtextarea";
 import { RippleModule } from "primeng/ripple";
-import { TeacherAddRoutingModule } from "./teacher-add-routing.module";
-import { TeacherAddComponent } from "./teacher-add.component";
+import { SubjectAddRoutingModule } from "./subject-add-routing.module";
+import { SubjectAddComponent } from "./subject-add.component";
 import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
@@ -21,10 +21,10 @@ import { ReactiveFormsModule } from "@angular/forms";
         RippleModule,
         ChipModule,
         EditorModule,
-        TeacherAddRoutingModule ,
+        SubjectAddRoutingModule ,
         ReactiveFormsModule 
         
     ],
-    declarations: [TeacherAddComponent]
+    declarations: [SubjectAddComponent]
 })
-export class TeacherAddModule { }
+export class SubjectAddModule { }

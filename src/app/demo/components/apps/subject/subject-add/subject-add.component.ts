@@ -3,42 +3,19 @@ import {  FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { File } from 'src/app/demo/api/file';
 
 @Component({
-    templateUrl: './teacher-add.component.html',
-    styleUrls: ['./teacher-add.component.scss']
+    templateUrl: './subject-add.component.html',
+    styleUrls: ['./subject-add.component.scss']
 })
-export class TeacherAddComponent  implements OnInit{
+export class SubjectAddComponent  implements OnInit{
  
     myForm!: FormGroup; 
     formErrors: { [key: string]: string } = {
-        'firstName': '',
-        'lastName': '',
-        'phone': '',
-        'email': '',
-        'date': '',
-        'subject': ''
+        'subjectName': '',
       };
       validationMessages: { [key: string]: { [key: string]: string } } = {
-        'firstName': {
-          'required': 'Le prénom est requis.'
+        'subjectName': {
+          'required': 'Le nom de matiere est requis.'
         },
-        'lastName': {
-          'required': 'Le nom de famille est requis.'
-        },
-        'phone': {
-          'required': 'Le numéro de téléphone est requis.',
-          'pattern': 'Le numéro de téléphone doit contenir uniquement des chiffres et ne doit pas dépasser 8 chiffres.'
-        },
-        'email': {
-          'required': 'L\'adresse e-mail est requise.',
-          'email': 'L\'adresse e-mail doit être valide.'
-        },
-        'date': {
-          'required': 'La date est requise.',
-          'pattern': 'Le format de la date doit être YYYY-MM-DD.'
-        },
-        'subject': {
-          'required': 'La matiere est requise.'
-        }
       };
     
     
@@ -46,12 +23,7 @@ export class TeacherAddComponent  implements OnInit{
     
       ngOnInit(): void {
         this.myForm = this.formBuilder.group({
-          firstName: ['', Validators.required],
-          lastName: ['', Validators.required],
-          phone: ['', [Validators.required, Validators.pattern('^[0-9]{1,8}$')]],
-          email: ['', [Validators.required, Validators.email]],
-          date: ['', [Validators.required, Validators.pattern(/^\d{4}-\d{2}-\d{2}$/)]],
-          subject: ['', Validators.required]
+          subjectName: ['', Validators.required],
         });
     
         this.myForm.valueChanges.subscribe(() => this.onValueChanged());

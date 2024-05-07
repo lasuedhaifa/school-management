@@ -62,6 +62,20 @@ export class AppMenuComponent implements OnInit {
                         ],
                     },
                     {
+                        label: 'Subject',
+                        icon: 'pi pi-user-edit',
+                        items: [
+                            {
+                                label: 'View Subject',
+                                routerLink: ['/apps/subject/list'],
+                            },
+                            {
+                                label: 'Add Subject',
+                                routerLink: ['/apps/subject/add'],
+                            },
+                        ],
+                    },
+                    {
                         label: 'Calendar',
                         icon: 'pi pi-fw pi-calendar',
                         routerLink: ['/apps/calendar'],

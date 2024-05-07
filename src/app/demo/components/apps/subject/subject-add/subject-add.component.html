@@ -1,0 +1,21 @@
+<div class="card">
+    <span class="block text-900 font-bold text-xl mb-4">Add a Subject</span>
+    <div class=" ">
+        <form   [formGroup]="myForm" (ngSubmit)="onSubmit()"  >
+        <div class="col-6 md:col-6">
+
+            <div class="flex flex-column p-fluid">
+                
+                <div class=" row mb-4">
+                    <input type="text" pInputText   formControlName="subjectName" placeholder="Subject Name"/>
+                </div>
+            </div>
+
+            <div class="flex justify-content-between gap-3">
+                <button pButton pRipple class="p-button-danger flex-1 p-button-outlined" label="Discard" icon="pi pi-fw pi-trash"></button>
+                <button type="submit" pButton pRipple class="p-button-primary flex-1" label="Publish" icon="pi pi-fw pi-check"></button>
+            </div>
+        </div>
+    </form>
+    </div>
+</div>
