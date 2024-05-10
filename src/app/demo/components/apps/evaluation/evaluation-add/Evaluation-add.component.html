@@ -1,0 +1,47 @@
+<div class="card">
+    <span class="block text-900 font-bold text-xl mb-4">Add an Evaluation</span>
+    <div class="">
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+            <div class="col-6 md:col-6">
+                <div class="flex flex-column p-fluid input-row">
+
+                    <div class="row mb-4">
+                        <div class="mb-3">
+                            <label for="termSelect" style="display: block; margin-bottom: 0.5rem;">Subject Name</label>
+                            <select id="termSelect" formControlName="subjectName"
+                                style="width: 100%; padding: 0.375rem 0.75rem; font-size: 1rem; line-height: 1.5; color: #495057; background-color: #fff; background-clip: padding-box; border: 1px solid #ced4da; border-radius: 0.25rem; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;">
+                                <option value="Mathematic">Mathematic</option>
+                                <option value="Physics">Physics</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <input type="text" pInputText formControlName="studentName" placeholder="Student Name" />
+                        </div>
+                        <div class="mb-4">
+                            <input type="number" pInputText formControlName="mark" placeholder="Mark" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="termSelect" style="display: block; margin-bottom: 0.5rem;">Term type:</label>
+                            <select id="termSelect" formControlName="termType"
+                                style="width: 100%; padding: 0.375rem 0.75rem; font-size: 1rem; line-height: 1.5; color: #495057; background-color: #fff; background-clip: padding-box; border: 1px solid #ced4da; border-radius: 0.25rem; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;">
+                                <option value="Mid-Term">Mid-Term</option>
+                                <option value="Final-Term">Final-Term</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <input type="text" pInputText formControlName="observation" placeholder="Observation" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="flex justify-content-between gap-3">
+                <button pButton pRipple class="p-button-danger flex-1 p-button-outlined" label="Discard"
+                    icon="pi pi-fw pi-trash"></button>
+                <button type="submit" pButton pRipple class="p-button-primary flex-1" label="Publish"
+                    icon="pi pi-fw pi-check"></button>
+            </div>
+        </form>
+    </div>
+</div>

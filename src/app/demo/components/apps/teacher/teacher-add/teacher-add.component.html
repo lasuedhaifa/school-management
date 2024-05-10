@@ -21,9 +21,18 @@
                 <div class="mb-4">
                     <input type="date" formControlName="date" pInputText/>
                 </div>
+                <h5>Subjects</h5>
                 <div class="mb-4">
-                    <input type="text" pInputText formControlName="subject" placeholder="Subject"/>
+                    <select pInputText formControlName="subject" multiple>
+                        <option value="subject1">Mathematics</option>
+                        <option value="subject2">Physics</option>
+                        <option value="subject3">Svt</option>
+                        <option value="subject3">English</option>
+                        <option value="subject3">French</option>
+                        <option value="subject3">Arabic</option>
+                    </select>
                 </div>
+                
             </div>
 
             <div class="flex justify-content-between gap-3">

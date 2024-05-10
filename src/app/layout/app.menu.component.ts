@@ -76,6 +76,20 @@ export class AppMenuComponent implements OnInit {
                         ],
                     },
                     {
+                        label: 'Evaluation',
+                        icon: 'pi pi-user-edit',
+                        items: [
+                            {
+                                label: 'View Evaluation',
+                                routerLink: ['/apps/evaluation/list'],
+                            },
+                            {
+                                label: 'Add Evaluation',
+                                routerLink: ['/apps/evaluation/add'],
+                            },
+                        ],
+                    },
+                    {
                         label: 'Calendar',
                         icon: 'pi pi-fw pi-calendar',
                         routerLink: ['/apps/calendar'],

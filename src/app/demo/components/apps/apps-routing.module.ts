@@ -12,6 +12,8 @@ import { RouterModule } from '@angular/router';
         { path: 'teacher', data: { breadcrumb: 'Teacher' }, loadChildren: () => import('./teacher/teacher.app.module').then(m => m.TeacherAppModule) },
         { path: 'student', data: { breadcrumb: 'Student' }, loadChildren: () => import('./student/student.app.module').then(m => m.StudentAppModule) },
         { path: 'subject', data: { breadcrumb: 'Subject' }, loadChildren: () => import('./subject/subject.app.module').then(m => m.SubjectAppModule) },
+        { path: 'evaluation', data: { breadcrumb: 'Evaluation' }, loadChildren: () => import('./evaluation/evaluation.app.module').then(m => m.EvaluationAppModule) },
+
 
 
         { path: '**', redirectTo: '/notfound' }
