@@ -7,6 +7,8 @@ import { RouterModule } from '@angular/router';
         { path: 'detail', data: { breadcrumb: 'Detail' }, loadChildren: () => import('./student-detail/student-detail.module').then(m => m.StudentDetailModule) },
         { path: 'edit', data: { breadcrumb: 'Edit' }, loadChildren: () => import('./student-edit/student-edit.module').then(m => m.StudentEditModule) },
         { path: 'add', data: { breadcrumb: 'Add' }, loadChildren: () => import('./student-add/student-add.module').then(m => m.StudentAddModule) },
+        { path: 'information', data: { breadcrumb: 'Info' }, loadChildren: () => import('./student-information/student-information.module').then(m => m.StudentInfoModule) },
+
 
         { path: '**', redirectTo: '/notfound' }
     ])],

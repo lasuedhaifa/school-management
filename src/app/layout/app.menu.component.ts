@@ -26,12 +26,31 @@ export class AppMenuComponent implements OnInit {
                 icon: 'pi pi-th-large',
                 items: [
                     {
+                        label: 'Class',
+                        icon: 'pi pi-user ',
+                        items: [
+                            {
+                                label: 'View Class',
+                                routerLink: ['/apps/class/list'],
+                            },
+                            {
+                                label: 'Add Class',
+                                routerLink: ['/apps/class/add'],
+                            },
+                            
+                        ],
+                    },
+                    {
                         label: 'Students',
                         icon: 'pi pi-user ',
                         items: [
                             {
                                 label: 'View Student',
                                 routerLink: ['/apps/student/list'],
+                            },
+                            {
+                                label: 'Info Student',
+                                routerLink: ['/apps/student/information'],
                             },
                             {
                                 label: 'Add Student',
@@ -50,6 +69,10 @@ export class AppMenuComponent implements OnInit {
                             {
                                 label: 'View Teachers',
                                 routerLink: ['/apps/teacher/list'],
+                            },
+                            {
+                                label: 'Info Teacher',
+                                routerLink: ['/apps/teacher/information'],
                             },
                             {
                                 label: 'Add Teacher',
@@ -86,6 +109,30 @@ export class AppMenuComponent implements OnInit {
                             {
                                 label: 'Add Evaluation',
                                 routerLink: ['/apps/evaluation/add'],
+                            },
+                        ],
+                    },
+                    {
+                        label: 'Module',
+                        icon: 'pi pi-user-edit',
+                        items: [
+                            {
+                                label: 'View Module',
+                                routerLink: ['/apps/module/list'],
+                            },
+                            {
+                                label: 'Add Module',
+                                routerLink: ['/apps/module/add'],
+                            },
+                        ],
+                    },
+                    {
+                        label: 'Mark',
+                        icon: 'pi pi-user-edit',
+                        items: [
+                            {
+                                label: 'View Marks',
+                                routerLink: ['/apps/marks/list'],
                             },
                         ],
                     },

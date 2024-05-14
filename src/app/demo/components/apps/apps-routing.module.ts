@@ -13,6 +13,11 @@ import { RouterModule } from '@angular/router';
         { path: 'student', data: { breadcrumb: 'Student' }, loadChildren: () => import('./student/student.app.module').then(m => m.StudentAppModule) },
         { path: 'subject', data: { breadcrumb: 'Subject' }, loadChildren: () => import('./subject/subject.app.module').then(m => m.SubjectAppModule) },
         { path: 'evaluation', data: { breadcrumb: 'Evaluation' }, loadChildren: () => import('./evaluation/evaluation.app.module').then(m => m.EvaluationAppModule) },
+        { path: 'module', data: { breadcrumb: 'Module' }, loadChildren: () => import('./module/module.app.module').then(m => m.ModuleAppModule) },
+        { path: 'class', data: { breadcrumb: 'Class' }, loadChildren: () => import('./class/class.app.module').then(m => m.ClassAppModule) },
+        { path: 'marks', data: { breadcrumb: 'Marks' }, loadChildren: () => import('./marks/mark.app.module').then(m => m.MarkAppModule) },
+
+
 
 
 

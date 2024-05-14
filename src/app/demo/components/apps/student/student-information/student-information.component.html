@@ -6,10 +6,12 @@
                 <th pSortableColumn="name" style="min-width:12rem" class="white-space-nowrap">Name</th>
                 <th pSortableColumn="date" style="min-width:12rem" class="white-space-nowrap">Birth-Day</th>
                 <th pSortableColumn="fileSize" style="min-width:12rem" class="white-space-nowrap">Email</th>
+                <th pSortableColumn="fileSize" style="min-width:12rem" class="white-space-nowrap">Phone Number</th>
+                <th pSortableColumn="name" style="min-width:12rem" class="white-space-nowrap">Parent Name</th>
+                <th pSortableColumn="name" style="min-width:12rem" class="white-space-nowrap">Parent Job</th>
                 <th pSortableColumn="fileSize" style="min-width:12rem" class="white-space-nowrap">Address</th>
                 <th pSortableColumn="fileSize" style="min-width:12rem" class="white-space-nowrap">Class</th>
                 <th pSortableColumn="fileSize" style="min-width:12rem" class="white-space-nowrap">Marks</th>
-                <th pSortableColumn="fileSize" style="min-width:12rem" class="white-space-nowrap">View Information</th>
 
                 <th style="width:10rem"></th>
             </tr>
@@ -19,10 +21,12 @@
                 <td>{{ row.name }}</td>
                 <td>{{ row.birthday }}</td>
                 <td>{{ row.email }}</td>
+                <td>{{ row.phoneNumber }}</td>
+                <td>{{ row.parentName }}</td>
+                <td>{{ row.parentJob }}</td>
                 <td>{{ row.address }}</td>
                 <td>{{ row.class }}</td>
                 <td><button type="button" style="background-color: #007bff; color: #ffffff; padding: 8px 16px; border: none; border-radius: 4px;">View Marks</button></td>
-                <td><a href="/apps/student/information"><button type="button" style="background-color: #007bff; color: #ffffff; padding: 8px 16px; border: none; border-radius: 4px;">View Information</button></a></td>
 
             </tr>
         </ng-template>
