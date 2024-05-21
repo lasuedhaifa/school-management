@@ -2,14 +2,14 @@ import { Component } from '@angular/core';
 import { SelectItem } from 'primeng/api';
 
 @Component({
-    templateUrl: './class-list.component.html',
+    templateUrl: './tutor-list.component.html',
 })
-export class ClassListComponent {
+export class TutorListComponent {
     // Sample data for the table
     tableData: any[] = [
         
 
-        { name: '4eme Math', level:'4' , numberofteacher: '5', studentNumber: '27' , teacher: 'mouadh, ahmed' ,subject: 'arabe, anglais'  },
+        { name: 'mohamed ahmed', birthday: '2005-05-20', email: 'ahmed@example.com', address: 'Al Mourouj 6',class: '4eme Math'  },
 
         // Add more data as needed
     ];

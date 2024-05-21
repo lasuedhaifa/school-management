@@ -3,17 +3,26 @@
     <p-table responsiveLayout="scroll" [value]="tableData" #dt [rows]="8" [paginator]="true">
         <ng-template pTemplate="header">
             <tr>
+                <th pSortableColumn="name" style="min-width:12rem" class="white-space-nowrap">Class Name</th>
                 <th pSortableColumn="name" style="min-width:12rem" class="white-space-nowrap">Class Level</th>
-                <th pSortableColumn="date" style="min-width:12rem" class="white-space-nowrap">Teachers</th>
+                <th pSortableColumn="date" style="min-width:12rem" class="white-space-nowrap">Number of Teachers</th>
                 <th pSortableColumn="date" style="min-width:12rem" class="white-space-nowrap">Number of Students</th>
+                <th pSortableColumn="date" style="min-width:12rem" class="white-space-nowrap">Name of Teachers</th>
+                <th pSortableColumn="date" style="min-width:12rem" class="white-space-nowrap">Subjects</th>
+
+
                 <th style="width:10rem"></th>
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-row>
             <tr>
                 <td>{{ row.name }}</td>
-                <td>{{ row.teacher }}</td>
+                <td>{{ row.level }}</td>
+                <td>{{ row.numberofteacher }}</td>
                 <td>{{ row.studentNumber }}</td>
+                <td>{{ row.teacher }}</td>
+                <td>{{ row.subject }}</td>
+
             </tr>
         </ng-template>
     </p-table>

@@ -337,104 +337,7 @@
                     [responsive]="true"
                 ></p-chart>
             </div>
-        </div>
-    </div>
 
-    <div class="col-12 md:col-12 xl:col-3">
-        <div class="grid">
-            <div class="col-12 md:col-6 xl:col-12">
-                <div class="surface-card py-3 px-3 shadow-1 border-round-md">
-                    <div
-                        class="flex align-items-center justify-content-between pb-1"
-                    >
-                        <h6 class="text-600 mb-0">Traffic</h6>
-                    </div>
-                    <span class="font-semibold text-sm text-700"
-                        >26 May - 27 May</span
-                    >
-                    <div class="flex justify-content-center mt-3">
-                        <p-chart
-                            #traffic
-                            type="doughnut"
-                            [data]="trafficChart"
-                            [options]="trafficOptions"
-                            [responsive]="true"
-                            [style]="{ position: 'relative', width: '50%' }"
-                        ></p-chart>
-                    </div>
-                    <div
-                        id="traffic-tabs-container"
-                        class="mt-5 flex gap-2 justify-content-between align-items-center"
-                    >
-                        <div
-                            class="traffic-tab border-round-sm text-center w-full cursor-pointer pt-1  pb-2"
-                            [ngClass]="{
-                                'traffic-tab-active text-white': activeTraffic === 0
-                            }"
-                            (click)="
-                                changeTrafficset($event);
-                                traffic.refresh();
-                                activeTraffic = 0
-                            "
-                            data-label="New Sales"
-                            data-index="0"
-                        >
-                            <h6
-                                class="m-0 mb-2 font-semibold"
-                                [ngClass]="{'text-white': activeTraffic === 0}"
-                            >
-                                48%
-                            </h6>
-                            <i class="pi pi-facebook text-3xl" ></i>
-                            <span class="block text-sm mt-2">Facebook</span>
-                        </div>
-                        <div
-                            class="traffic-tab border-round-sm text-center w-full cursor-pointer pt-1  pb-2"
-                            [ngClass]="{
-                                'traffic-tab-active text-white': activeTraffic === 1
-                            }"
-                            (click)="
-                                changeTrafficset($event);
-                                traffic.refresh();
-                                activeTraffic = 1
-                            "
-                            data-label="Previous Sales"
-                            data-index="1"
-                        >
-                            <h6
-                                class="m-0 mb-2 font-semibold"
-                                [ngClass]="{'text-white': activeTraffic === 1}"
-                            >
-                                26%
-                            </h6>
-                            <i class="pi pi-twitter text-3xl"></i>
-                            <span class="block text-sm mt-2">Twitter</span>
-                        </div>
-                        <div
-                            class="traffic-tab border-round-sm text-center w-full cursor-pointer pt-1  pb-2"
-                            [ngClass]="{
-                                'traffic-tab-active text-white': activeTraffic === 2
-                            }"
-                            (click)="
-                                changeTrafficset($event);
-                                traffic.refresh();
-                                activeTraffic = 2
-                            "
-                            data-label="Previous Sales"
-                            data-index="2"
-                        >
-                            <h6
-                                class="m-0 mb-2 font-semibold"
-                                [ngClass]="{'text-white': activeTraffic === 2}"
-                            >
-                                17%
-                            </h6>
-                            <i class="pi pi-github text-3xl"></i>
-                            <span class="block text-sm mt-2">Github</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="col-12 md:col-6 xl:col-12">
                 <div
                     class="surface-card py-3 px-4 shadow-1 border-round-md overflow-x-hidden"
@@ -473,136 +376,8 @@
 
     <div class="col-12 md:col-6 xl:col-4">
         <div class="surface-card py-3 px-4 shadow-1 border-round-md h-full">
-            <div class="flex align-items-center justify-content-between pb-2">
-                <h6 class="text-600 pb-1 m-0">Leaderboard</h6>
-            </div>
-            <ul class="m-0 p-0">
-                <li
-                    class="flex align-items-center justify-content-between mt-2 p-1 border-round-xs cursor-pointer"
-                >
-                    <div class="flex align-items-center">
-                        <img
-                            src="assets/layout/images/dashboard/leader-1.png"
-                            style="width: 2.3rem; height: 2.3rem"
-        class="m-0 mr-3"
-                        />
-                        <p class="m-0 text-600 mr-2"  >Peter Taylor</p>
-                    </div>
-                    <div class="flex align-items-center">
-                        <h6 class="text-600 m-0 font-semibold mr-3" >$224.44</h6>
-                        <i class="pi pi-arrow-up text-cyan-500"></i>
-                    </div>
-                </li>
-                <li
-                    class="flex align-items-center justify-content-between mt-2 p-1 border-round-xs cursor-pointer"
-                >
-                    <div class="flex align-items-center">
-                        <img
-                            src="assets/layout/images/dashboard/leader-2.png"
-                            alt="poseidon-layout"
-                            style="width: 2.3rem; height: 2.3rem"
-                        class="m-0 mr-3"
-                        />
-                        <p class="m-0 text-600 mr-2" >Nicolina Lindholm</p>
-                    </div>
-                    <div class="flex align-items-center">
-                        <h6 class="text-600 m-0 font-semibold mr-3" >$86.05</h6>
-                        <i class="pi pi-arrow-up text-cyan-500"></i>
-                    </div>
-                </li>
-                <li
-                    class="flex align-items-center justify-content-between mt-2 p-1 border-round-xs cursor-pointer"
-                >
-                    <div class="flex align-items-center">
-                        <img
-                            src="assets/layout/images/dashboard/leader-3.png"
-                            alt="poseidon-layout"
-                            style="width: 2.3rem; height: 2.3rem"
-                          class="m-0 mr-3"
-                        />
-                        <p class="m-0 text-600 mr-2"  >Su Hua</p>
-                    </div>
-                    <div class="flex align-items-center">
-                           <h6 class="text-600 m-0 font-semibold mr-3" >$59.44</h6>
-                        <i class="pi pi-arrow-up text-cyan-500"></i>
-                    </div>
-                </li>
-                <li
-                    class="flex align-items-center justify-content-between mt-2 p-1 border-round-xs cursor-pointer"
-                >
-                    <div class="flex align-items-center">
-                        <img
-                            src="assets/layout/images/dashboard/leader-4.png"
-                            alt="poseidon-layout"
-                            style="width: 2.3rem; height: 2.3rem"
-                           class="m-0 mr-3"
-                        />
-                        <p class="m-0 text-600 mr-2">Maria Illescas</p>
-                    </div>
-                    <div class="flex align-items-center">
-                           <h6 class="text-600 m-0 font-semibold mr-3" >$12.32</h6>
-                        <i class="pi pi-arrow-up text-cyan-500"></i>
-                    </div>
-                </li>
-                <li
-                    class="flex align-items-center justify-content-between mt-2 p-1 border-round-xs cursor-pointer"
-                >
-                    <div class="flex align-items-center">
-                        <img
-                            src="assets/layout/images/dashboard/avatar-dengra.png"
-                            alt="poseidon-layout"
-                            style="width: 2.3rem; height: 2.3rem"
-                            class="m-0 mr-3"
-                        />
-                        <p class="m-0 text-600 mr-2" >Ezequiel Dengra</p>
-                    </div>
-                    <div class="flex align-items-center">
-                           <h6 class="text-600 m-0 font-semibold mr-3" >$12.32</h6>
-                        <i class="pi pi-arrow-up text-cyan-500"></i>
-                    </div>
-                </li>
-                <li
-                    class="flex align-items-center justify-content-between mt-2 p-1 border-round-xs cursor-pointer"
-                >
-                    <div class="flex align-items-center">
-                        <img
-                            src="assets/layout/images/dashboard/avatar-conan.png"
-                            alt="poseidon-layout"
-                            style="width: 2.3rem; height: 2.3rem"
-                            class="m-0 mr-3"
-                        />
-                        <p class="m-0 text-600 mr-2"  >Conan Matusov</p>
-                    </div>
-                    <div class="flex align-items-center">
-                           <h6 class="text-600 m-0 font-semibold mr-3" >$12.32</h6>
-                        <i class="pi pi-arrow-up text-cyan-500"></i>
-                    </div>
-                </li>
-                <li
-                    class="flex align-items-center justify-content-between mt-2 p-1 border-round-xs cursor-pointer"
-                >
-                    <div class="flex align-items-center">
-                        <img
-                            src="assets/layout/images/dashboard/seller-1.png"
-                            alt="poseidon-layout"
-                            style="width: 2.3rem; height: 2.3rem"
-                           class="m-0 mr-3"
-                        />
-                        <p class="m-0 text-600 mr-2" >Hector Mariano</p>
-                    </div>
-                    <div class="flex align-items-center">
-                           <h6 class="text-600 m-0 font-semibold mr-3">$12.32</h6>
-                        <i class="pi pi-arrow-up text-cyan-500"></i>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="col-12 md:col-6 xl:col-4">
-        <div class="surface-card py-3 px-4 shadow-1 border-round-md h-full">
             <div class="mb-2">
-                <h6 class="text-600 text-600">Product List</h6>
+                <h6 class="text-600 text-600">Best teacher list </h6>
             </div>
             <ul class="p-0 m-0 list-none">
                 <li
@@ -722,7 +497,7 @@
     <div class="col-12 md:col-6 xl:col-4">
         <div class="surface-card py-3 px-4 shadow-1 border-round-md h-full">
             <div class="mb-2">
-                <h6 class="text-600 text-600">Seller List</h6>
+                <h6 class="text-600 text-600">Top students    </h6>
             </div>
             <ul class="p-0 m-0 list-none">
                 <li
@@ -950,7 +725,7 @@
                         class="flex justify-content-between align-items-center mb-3"
                     >
                         <div class="text-color">
-                            <span class="font-semibold">12</span> Orders to
+                            <span class="font-semibold">12</span> Marks to
                             fulfill
                         </div>
                         <div
@@ -1002,8 +777,7 @@
                         class="flex justify-content-between align-items-center mb-3"
                     >
                         <div class="text-color">
-                            <span class="font-semibold">4</span> Reports to
-                            revise
+                            <span class="font-semibold">4</span> Students Reports
                         </div>
                         <div
                             class="flex align-items-center justify-content-center border-1 border-circle bg-orange-100 border-transparent text-500"
@@ -1131,85 +905,4 @@
         </div>
     </div>
 
-    <div class="col-12 xl:col-8">
-        <div class="surface-card py-3 px-4 shadow-1 border-round-md h-full">
-            <div
-                class="mb-2 pb-1 flex justify-content-between align-items-center"
-            >
-                <h6 class="text-600">Recent Sales</h6>
-                <p-dropdown
-                    [options]="orderWeek"
-                    [(ngModel)]="selectedOrderWeek"
-                    optionLabel="name"
-                    (onChange)="recentSales($event)"
-                    styleClass="dashbard-demo-dropdown"
-                    [ngStyle]="{ 'min-width': '8rem' }"
-                ></p-dropdown>
-            </div>
-
-            <p>Your sales activity over time.</p>
-
-            <p-table
-                [value]="products"
-                [paginator]="true"
-                [rows]="5"
-                styleClass="p-datatable-customers"
-            >
-                <ng-template pTemplate="header">
-                    <tr>
-                        <th pSortableColumn="id">
-                            ID
-                            <p-sortIcon field="id"></p-sortIcon>
-                        </th>
-                        <th pSortableColumn="category">
-                            Category
-                            <p-sortIcon field="category"></p-sortIcon>
-                        </th>
-                        <th pSortableColumn="price">
-                            Price
-                            <p-sortIcon field="price"></p-sortIcon>
-                        </th>
-                        <th pSortableColumn="inventoryStatus">
-                            Status
-                            <p-sortIcon field="inventoryStatus"></p-sortIcon>
-                        </th>
-                        <th></th>
-                    </tr>
-                </ng-template>
-                <ng-template pTemplate="body" let-product>
-                    <tr>
-                        <td style="min-width: 7rem">
-                            <span class="p-column-title">Id</span>
-                            {{ product.id }}
-                        </td>
-                        <td style="min-width: 12rem">
-                            <span class="p-column-title">Category</span>
-                            {{ product.category }}
-                        </td>
-                        <td style="min-width: 12rem">
-                            <span class="p-column-title">Price</span>
-                            {{ product.price | currency : "USD" }}
-                        </td>
-                        <td style="min-width: 12rem">
-                            <span class="p-column-title">Status</span>
-                            <span
-                                [class]="
-                                    'product-badge status-' +
-                                    product.inventoryStatus.toLowerCase()
-                                "
-                                >{{ product.inventoryStatus }}</span
-                            >
-                        </td>
-                        <td style="text-align: center" style="min-width: 8rem">
-                            <button
-                                pButton
-                                type="button"
-                                icon="pi pi-search"
-                            ></button>
-                        </td>
-                    </tr>
-                </ng-template>
-            </p-table>
-        </div>
-    </div>
 </div>

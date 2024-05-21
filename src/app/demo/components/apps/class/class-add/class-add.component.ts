@@ -5,6 +5,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './class-add.component.html',
   styleUrls: ['./class-add.component.scss']
 })
+
+
 export class ClassAddComponent implements OnInit {
   myForm!: FormGroup;
   formErrors: { [key: string]: string } = {
@@ -12,6 +14,9 @@ export class ClassAddComponent implements OnInit {
     'studentNumber': '',
     'teacherNumber': ''
   };
+
+
+
 
   validationMessages: { [key: string]: { [key: string]: string } } = {
     'classLevel': {
@@ -32,6 +37,7 @@ export class ClassAddComponent implements OnInit {
       classLevel: ['', Validators.required],
       studentNumber: ['', Validators.required],
       teacherNumber: ['', Validators.required],
+      teacherName: ['', Validators.required],
       subject: [[]] // assuming it's a multi-select and you're storing multiple values
     });
 

@@ -19,22 +19,8 @@ const routes: Routes = [
                         (m) => m.DashboardModule
                     ),
             },
-            {
-                path: 'uikit',
-                data: { breadcrumb: 'UI Kit' },
-                loadChildren: () =>
-                    import('./demo/components/uikit/uikit.module').then(
-                        (m) => m.UIkitModule
-                    ),
-            },
-            {
-                path: 'utilities',
-                data: { breadcrumb: 'Utilities' },
-                loadChildren: () =>
-                    import('./demo/components/utilities/utilities.module').then(
-                        (m) => m.UtilitiesModule
-                    ),
-            },
+           
+    
             {
                 path: 'pages',
                 data: { breadcrumb: 'Pages' },
@@ -43,14 +29,7 @@ const routes: Routes = [
                         (m) => m.PagesModule
                     ),
             },
-            {
-                path: 'profile',
-                data: { breadcrumb: 'User Management' },
-                loadChildren: () =>
-                    import('./demo/components/profile/profile.module').then(
-                        (m) => m.ProfileModule
-                    ),
-            },
+          
             {
                 path: 'documentation',
                 data: { breadcrumb: 'Documentation' },
@@ -59,22 +38,7 @@ const routes: Routes = [
                         './demo/components/documentation/documentation.module'
                     ).then((m) => m.DocumentationModule),
             },
-            {
-                path: 'blocks',
-                data: { breadcrumb: 'Prime Blocks' },
-                loadChildren: () =>
-                    import(
-                        './demo/components/primeblocks/primeblocks.module'
-                    ).then((m) => m.PrimeBlocksModule),
-            },
-            {
-                path: 'ecommerce',
-                data: { breadcrumb: 'E-Commerce' },
-                loadChildren: () =>
-                    import('./demo/components/ecommerce/ecommerce.module').then(
-                        (m) => m.EcommerceModule
-                    ),
-            },
+            
             {
                 path: 'apps',
                 data: { breadcrumb: 'Apps' },
@@ -98,13 +62,6 @@ const routes: Routes = [
         loadChildren: () =>
             import('./demo/components/notfound/notfound.module').then(
                 (m) => m.NotfoundModule
-            ),
-    },
-    {
-        path: 'landing',
-        loadChildren: () =>
-            import('./demo/components/landing/landing.module').then(
-                (m) => m.LandingModule
             ),
     },
     { path: '**', redirectTo: '/notfound' },

@@ -1,5 +1,54 @@
-<div class="card">
-    <div class="text-900 text-xl font-semibold mb-3">student report</div>
-    
-    
+<div class="container">
+    <button id="downloadPdfBtn">
+    Download PDF
+    </button>
+    <div class="card" *ngIf="student">
+        <div class="card-header">Student Report Card</div>
+        <table class="student-info">
+            <tr><th>Name:</th><td>{{ student.name }}</td></tr>
+            <tr><th>Birth-Day:</th><td>{{ student.birthday }}</td></tr>
+            <tr><th>Email:</th><td>{{ student.email }}</td></tr>
+            <tr><th>Phone Number:</th><td>{{ student.phoneNumber }}</td></tr>
+            <tr><th>Parent Name:</th><td>{{ student.parentName }}</td></tr>
+            <tr><th>Parent Job:</th><td>{{ student.parentJob }}</td></tr>
+            <tr><th>Address:</th><td>{{ student.address }}</td></tr>
+            <tr><th>Class:</th><td>{{ student.class }}</td></tr>
+        </table>
+
+        <div *ngFor="let module of student.modules">
+            <div class="module-header">Module: {{ module.name }}</div>
+            <table class="module-table">
+                <thead>
+                    <tr>
+                        <th class="text-center">Subject</th>
+                        <th class="text-center">Test Grade</th>
+                        <th class="text-center">Exam Grade</th>
+                        <th class="text-center">Average</th>
+                        <th class="text-center">Teacher</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let subject of module.subjects">
+                        <td>{{ subject.name }}</td>
+                        <td class="text-center">{{ subject.testGrade }}</td>
+                        <td class="text-center">{{ subject.examGrade }}</td>
+                        <td class="text-center">{{ subject.average }}</td>
+                        <td class="text-center">{{ subject.teacher }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="final-grade-table">
+                <tr><th>Module Average:</th><td class="text-center">{{ module.average }}</td></tr>
+                <tr><th>Observation:</th><td class="text-center">{{ module.observation }}</td></tr>
+            </table>
+        </div>
+
+        <div class="module-header">Overall Performance</div>
+        <table class="final-grade-table">
+            <tr><th>Overall Average:</th><td class="text-center">{{ student.overallAverage }}</td></tr>
+            <tr><th>Level:</th><td class="text-center">{{ student.level }}</td></tr>
+            <tr><th>Overall Observation:</th><td class="text-center">{{ student.overallObservation }}</td></tr>
+        </table>
+    </div>
 </div>
+
